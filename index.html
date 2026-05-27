@@ -42,6 +42,7 @@
   .nav-cta{background:var(--teal);color:#000;padding:9px 20px;border-radius:8px;font-weight:700;font-size:14px;text-decoration:none;transition:opacity .2s;}
   .nav-cta:hover{opacity:.88;color:#000;}
   .nav-mobile-cta{display:none;}
+  .nav-mobile-login{display:none;}
 
   /* HERO */
   .hero{min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:100px 24px 80px;position:relative;overflow:hidden;}
@@ -125,6 +126,7 @@
   @media(max-width:640px){
     .nav-links{display:none;}
     .nav-mobile-cta{display:block;background:var(--teal);color:#000;padding:8px 16px;border-radius:8px;font-weight:700;font-size:13px;text-decoration:none;}
+    .nav-mobile-login{display:block;color:var(--sub);text-decoration:none;font-size:13px;font-weight:500;padding:8px 4px;}
     .hero-btns{flex-direction:column;align-items:center;}
     .btn-primary,.btn-secondary{width:100%;max-width:300px;text-align:center;}
     footer{justify-content:center;text-align:center;}
@@ -144,7 +146,10 @@
     <a href="https://heathchartier.github.io/route-app/" target="_blank">Log In</a>
     <a href="https://heathchartier.github.io/route-app/#signup" target="_blank" class="nav-cta">Start Free Trial</a>
   </div>
-  <a href="https://heathchartier.github.io/route-app/#signup" target="_blank" class="nav-mobile-cta">Get Started</a>
+  <div style="display:flex;align-items:center;gap:12px;">
+    <a href="https://heathchartier.github.io/route-app/" target="_blank" class="nav-mobile-login">Log In</a>
+    <a href="https://heathchartier.github.io/route-app/#signup" target="_blank" class="nav-mobile-cta">Get Started</a>
+  </div>
 </nav>
 
 <!-- HERO -->
