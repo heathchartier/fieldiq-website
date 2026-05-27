@@ -30,6 +30,7 @@
     --r:12px;
   }
   html{scroll-behavior:smooth;}
+  html:not([data-scrolled]){scroll-behavior:auto;}
   body{background:var(--bg);color:var(--text);font-family:-apple-system,'SF Pro Display','Helvetica Neue',Arial,sans-serif;line-height:1.6;overflow-x:hidden;}
 
   /* NAV */
@@ -141,9 +142,9 @@
     <a href="#how">How It Works</a>
     <a href="#pricing">Pricing</a>
     <a href="https://heathchartier.github.io/route-app/" target="_blank">Log In</a>
-    <a href="https://heathchartier.github.io/route-app/" target="_blank" class="nav-cta">Start Free Trial</a>
+    <a href="https://heathchartier.github.io/route-app/#signup" target="_blank" class="nav-cta">Start Free Trial</a>
   </div>
-  <a href="https://heathchartier.github.io/route-app/" target="_blank" class="nav-mobile-cta">Get Started</a>
+  <a href="https://heathchartier.github.io/route-app/#signup" target="_blank" class="nav-mobile-cta">Get Started</a>
 </nav>
 
 <!-- HERO -->
@@ -152,7 +153,7 @@
   <h1>The CRM Built for<br><span>Outside Sales Reps</span></h1>
   <p>Stop losing deals because you forgot to follow up. FieldIQ organizes your territory, plans your routes, and keeps every customer detail at your fingertips — all from your phone.</p>
   <div class="hero-btns">
-    <a href="https://heathchartier.github.io/route-app/" target="_blank" class="btn-primary">Start Free Trial →</a>
+    <a href="https://heathchartier.github.io/route-app/#signup" target="_blank" class="btn-primary">Start Free Trial →</a>
     <a href="#features" class="btn-secondary">See Features</a>
   </div>
   <p class="hero-sub">14-day free trial &nbsp;·&nbsp; No credit card required &nbsp;·&nbsp; iPhone, Android &amp; desktop</p>
@@ -308,7 +309,7 @@
       <li>CSV export &amp; data backup</li>
       <li>Native iPhone app + works on Android &amp; desktop</li>
     </ul>
-    <a href="https://heathchartier.github.io/route-app/" target="_blank" class="btn-primary" style="display:block;text-align:center;font-size:16px;">Start 14-Day Free Trial</a>
+    <a href="https://heathchartier.github.io/route-app/#signup" target="_blank" class="btn-primary" style="display:block;text-align:center;font-size:16px;">Start 14-Day Free Trial</a>
     <p class="trial-note">No credit card required during trial</p>
   </div>
 </div>
@@ -317,7 +318,7 @@
 <div class="cta-section">
   <h2>Ready to own your territory?</h2>
   <p>Join field reps who use FieldIQ to stay organized, visit more customers, and close more deals.</p>
-  <a href="https://heathchartier.github.io/route-app/" target="_blank" class="btn-primary">Get Started Free →</a>
+  <a href="https://heathchartier.github.io/route-app/#signup" target="_blank" class="btn-primary">Get Started Free →</a>
   <p style="margin-top:16px;font-size:13px;color:var(--dim)">14-day free trial &nbsp;·&nbsp; No credit card &nbsp;·&nbsp; Cancel anytime</p>
 </div>
 
@@ -335,5 +336,12 @@
   <p class="footer-copy">© 2026 FieldIQ. All rights reserved.</p>
 </footer>
 
+<script>
+  // Always start at top of page on load
+  if(history.scrollRestoration)history.scrollRestoration='manual';
+  window.scrollTo(0,0);
+  // Enable smooth scroll after initial load
+  setTimeout(function(){document.documentElement.setAttribute('data-scrolled','1');},100);
+</script>
 </body>
 </html>
